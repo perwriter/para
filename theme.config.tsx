@@ -1,14 +1,15 @@
+
 import React, { useState } from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 import Image from 'next/image'
 import Link from 'next/link'
 
-// Move the Dropdown component above the config
+// Dropdown component for mobile view
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
       {/* Dropdown Toggle Button */}
       <button
         style={{
@@ -23,17 +24,18 @@ const Dropdown = () => {
         Menu
       </button>
 
-      {/* Dropdown Links */}
+      {/* Dropdown Links (Opening Upwards) */}
       {isOpen && (
         <div
           style={{
             position: 'absolute',
-            top: '100%',
+            bottom: '100%', // Moves dropdown above button
             left: '0',
-            width: '100%',
+            width: '200px', // Default width
             backgroundColor: '#fff',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            boxShadow: '0 -4px 6px rgba(0, 0, 0, 0.1)',
             zIndex: 10,
+            maxWidth: '90vw', // Makes the dropdown take most of the screen on mobile
           }}
         >
           <div style={{ padding: '10px 20px', textAlign: 'center' }}>
@@ -94,6 +96,40 @@ const config: DocsThemeConfig = {
             <Image src='https://www.paramind.net/paralogo4.gif' alt='logo' width={120} height={40} />
           </div>
 
+          {/* Links in the middle for larger screens */}
+          <div className="footer-links" style={{ display: 'none', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <Link href="/more" passHref>
+              <a style={{ margin: '0 10px' }}>More About ParaMind</a>
+            </Link>
+            <Link href="/theory" passHref>
+              <a style={{ margin: '0 10px' }}>ParaMind's Theory</a>
+            </Link>
+            <Link href="/examples" passHref>
+              <a style={{ margin: '0 10px' }}>ParaMind Examples</a>
+            </Link>
+            <Link href="/screenshots" passHref>
+              <a style={{ margin: '0 10px' }}>Screen Shots</a>
+            </Link>
+            <Link href="/feedback" passHref>
+              <a style={{ margin: '0 10px' }}>User Feedback</a>
+            </Link>
+            <Link href="/education" passHref>
+              <a style={{ margin: '0 10px' }}>ParaMind and Education</a>
+            </Link>
+            <Link href="/law" passHref>
+              <a style={{ margin: '0 10px' }}>ParaMind for Law</a>
+            </Link>
+            <Link href="/lite" passHref>
+              <a style={{ margin: '0 10px' }}>ParaMind Lite</a>
+            </Link>
+            <Link href="/professional" passHref>
+              <a style={{ margin: '0 10px' }}>ParaMind Professional Version</a>
+            </Link>
+            <Link href="/links" passHref>
+              <a style={{ margin: '0 10px' }}>Links</a>
+            </Link>
+          </div>
+
           {/* Dropdown for Links in Mobile */}
           <div className="links-dropdown" style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Dropdown />
@@ -119,15 +155,12 @@ const config: DocsThemeConfig = {
         </div>
 
         <style jsx>{`
-          /* Styling for mobile responsiveness */
-          @media (max-width: 768px) {
-            .links-dropdown {
-              flex-direction: column;
-              align-items: center;
+          @media (min-width: 768px) {
+            .footer-links {
+              display: flex !important;
             }
-
-            .btn-order {
-              margin-top: 10px;
+            .links-dropdown {
+              display: none !important;
             }
           }
         `}</style>
@@ -137,3 +170,4 @@ const config: DocsThemeConfig = {
 }
 
 export default config
+
