@@ -1,23 +1,23 @@
-  {
-    "index": "Home",
-    "more": "More About ParaMind",
-    "theory": "ParaMind's Theory",
-    "examples": "ParaMind Examples",
-    "screenshots": "Screen Shots",
-    "feedback": "User Feedback",
-    "education": "ParaMind and Education",
-    "professional": "ParaMind Professional",
-    "law": "ParaMind for Law",
-    "lite": "ParaMind Lite",
-    "order": "Order ParaMind",
-    "new": {
-      "windows": "New ParaMind for Windows 64 Bit",
-      "mac": "ParaMind for Mac OSX",
-      "linux": "ParaMind for Linux",
-      "scientific": "New Scientific Inventor's Version",
-      "categories": "New Additional General Categories",
-      "brand": "ParaMind for Brand Name Generation"
-    },
+{
+  "index": "Home",
+  "theory": "ParaMind's Theory",
+  "examples": "ParaMind Examples",
+  "screenshots": "Screen Shots",
+  "feedback": "User Feedback",
+  "education": "ParaMind and Education",
+  "professional": "ParaMind Professional",
+  "law": "ParaMind for Law",
+  "lite": "ParaMind Lite",
+  "more": "More About ParaMind",
+  "order": "Order ParaMind",
+  "new": {
+    "windows": "New ParaMind for Windows 64 Bit",
+    "mac": "ParaMind for Mac OSX",
+    "linux": "ParaMind for Linux",
+    "scientific": "New Scientific Inventor's Version",
+    "categories": "New Additional General Categories",
+    "brand": "ParaMind for Brand Name Generation"
+  },
   "contact": {
     "title": "Contact ↗",
     "type": "page",
