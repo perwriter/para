@@ -8,9 +8,14 @@ const config: DocsThemeConfig = {
   footer: {
     text: (
       <>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <Image src='https://www.paramind.net/paralogo4.gif' alt='logo' width={120} height={40} />
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '1rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', padding: '20px 40px', boxSizing: 'border-box' }}>
+          {/* Logo on the left */}
+          <div>
+            <Image src='https://www.paramind.net/paralogo4.gif' alt='logo' width={120} height={40} />
+          </div>
+
+          {/* Links in the middle */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
             <Link href="/more-about-paramind" passHref>
               <a style={{ margin: '0 10px' }}>More About ParaMind</a>
             </Link>
@@ -43,9 +48,19 @@ const config: DocsThemeConfig = {
             </Link>
           </div>
 
-          <div style={{ marginTop: '1rem' }}>
+          {/* Order button on the right */}
+          <div>
             <Link href="/order" passHref>
-              <a className="btn-order" style={{ padding: '10px 20px', backgroundColor: '#0070f3', color: 'white', borderRadius: '5px' }}>
+              <a
+                className="btn-order"
+                style={{
+                  padding: '10px 20px',
+                  backgroundColor: '#f38a00',
+                  color: 'white',
+                  borderRadius: '5px',
+                  textDecoration: 'none',
+                }}
+              >
                 Order ParaMind
               </a>
             </Link>
