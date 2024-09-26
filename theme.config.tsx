@@ -61,7 +61,7 @@ const config: DocsThemeConfig = {
                   textDecoration: 'none',
                 }}
               >
-                Order ParaMind
+                Order
               </a>
             </Link>
           </div>
