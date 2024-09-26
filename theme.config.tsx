@@ -16,31 +16,31 @@ const config: DocsThemeConfig = {
 
           {/* Links in the middle */}
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-            <Link href="/more-about-paramind" passHref>
+            <Link href="/more" passHref>
               <a style={{ margin: '0 10px' }}>More About ParaMind</a>
             </Link>
-            <Link href="/paraminds-theory" passHref>
+            <Link href="/theory" passHref>
               <a style={{ margin: '0 10px' }}>ParaMind's Theory</a>
             </Link>
-            <Link href="/paramind-examples" passHref>
+            <Link href="/examples" passHref>
               <a style={{ margin: '0 10px' }}>ParaMind Examples</a>
             </Link>
             <Link href="/screenshots" passHref>
               <a style={{ margin: '0 10px' }}>Screen Shots</a>
             </Link>
-            <Link href="/user-feedback" passHref>
+            <Link href="/feedback" passHref>
               <a style={{ margin: '0 10px' }}>User Feedback</a>
             </Link>
-            <Link href="/paramind-education" passHref>
+            <Link href="/education" passHref>
               <a style={{ margin: '0 10px' }}>ParaMind and Education</a>
             </Link>
-            <Link href="/paramind-law" passHref>
+            <Link href="/law" passHref>
               <a style={{ margin: '0 10px' }}>ParaMind for Law</a>
             </Link>
-            <Link href="/paramind-lite" passHref>
+            <Link href="/lite" passHref>
               <a style={{ margin: '0 10px' }}>ParaMind Lite</a>
             </Link>
-            <Link href="/paramind-professional" passHref>
+            <Link href="/professional" passHref>
               <a style={{ margin: '0 10px' }}>ParaMind Professional Version</a>
             </Link>
             <Link href="/links" passHref>
