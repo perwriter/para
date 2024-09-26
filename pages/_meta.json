@@ -18,10 +18,10 @@
     "categories": "New Additional General Categories",
     "brand": "ParaMind for Brand Name Generation"
   },
-  "contact": {
-    "title": "Contact ↗",
+  "order": {
+    "title": "Order ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://para-blond.vercel.app/order",
     "newWindow": true
   }
 }
