@@ -3,69 +3,7 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const config: DocsThemeConfig = {
-  logo: <Image src='https://www.paramind.net/paralogo4.gif' alt='logo' width={120} height={40} />,
-  footer: {
-    text: (
-      <>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            width: '100%',
-            padding: '20px 40px',
-            boxSizing: 'border-box',
-          }}
-        >
-          {/* Logo on the left */}
-          <div>
-            <Image src='https://www.paramind.net/paralogo4.gif' alt='logo' width={120} height={40} />
-          </div>
-
-          {/* Dropdown for Links in Mobile */}
-          <div className="links-dropdown" style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Dropdown />
-          </div>
-
-          {/* Order button on the right */}
-          <div>
-            <Link href="/order" passHref>
-              <a
-                className="btn-order"
-                style={{
-                  padding: '10px 20px',
-                  backgroundColor: '#f38a00',
-                  color: 'white',
-                  borderRadius: '5px',
-                  textDecoration: 'none',
-                }}
-              >
-                Order
-              </a>
-            </Link>
-          </div>
-        </div>
-
-        <style jsx>{`
-          /* Styling for mobile responsiveness */
-          @media (max-width: 768px) {
-            .links-dropdown {
-              flex-direction: column;
-              align-items: center;
-            }
-
-            .btn-order {
-              margin-top: 10px;
-            }
-          }
-        `}</style>
-      </>
-    ),
-  },
-}
-
-// Dropdown component for mobile links
+// Move the Dropdown component above the config
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -134,6 +72,68 @@ const Dropdown = () => {
       )}
     </div>
   )
+}
+
+const config: DocsThemeConfig = {
+  logo: <Image src='https://www.paramind.net/paralogo4.gif' alt='logo' width={120} height={40} />,
+  footer: {
+    text: (
+      <>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            width: '100%',
+            padding: '20px 40px',
+            boxSizing: 'border-box',
+          }}
+        >
+          {/* Logo on the left */}
+          <div>
+            <Image src='https://www.paramind.net/paralogo4.gif' alt='logo' width={120} height={40} />
+          </div>
+
+          {/* Dropdown for Links in Mobile */}
+          <div className="links-dropdown" style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Dropdown />
+          </div>
+
+          {/* Order button on the right */}
+          <div>
+            <Link href="/order" passHref>
+              <a
+                className="btn-order"
+                style={{
+                  padding: '10px 20px',
+                  backgroundColor: '#f38a00',
+                  color: 'white',
+                  borderRadius: '5px',
+                  textDecoration: 'none',
+                }}
+              >
+                Order
+              </a>
+            </Link>
+          </div>
+        </div>
+
+        <style jsx>{`
+          /* Styling for mobile responsiveness */
+          @media (max-width: 768px) {
+            .links-dropdown {
+              flex-direction: column;
+              align-items: center;
+            }
+
+            .btn-order {
+              margin-top: 10px;
+            }
+          }
+        `}</style>
+      </>
+    ),
+  },
 }
 
 export default config
