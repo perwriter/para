@@ -1,17 +1,28 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import Image from 'next/image'
 
 const config: DocsThemeConfig = {
-  logo: <span>Para</span>,
-  project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
-  },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  logo: (
+    <Image
+      src='https://www.paramind.net/paralogo4.gif'
+      alt='logo'
+      width={100}  // Set appropriate width
+      height={40}  // Set appropriate height
+    />
+  ),
   footer: {
-    text: 'Para',
+    text: (
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <Image
+          src='https://www.paramind.net/paralogo4.gif'
+          alt='logo'
+          width={100}  // Same width as above
+          height={40}  // Same height as above
+        />
+        <span style={{ marginLeft: '8px' }}>ParaMind - All rights reserved.</span>
+      </div>
+    ),
   },
 }
 
