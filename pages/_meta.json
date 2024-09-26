@@ -1,6 +1,6 @@
   {
     "index": "Home",
-    "about": "More About ParaMind",
+    "more": "More About ParaMind",
     "theory": "ParaMind's Theory",
     "examples": "ParaMind Examples",
     "screenshots": "Screen Shots",
@@ -9,7 +9,6 @@
     "professional": "ParaMind Professional",
     "law": "ParaMind for Law",
     "lite": "ParaMind Lite",
-    "more": "More About ParaMind",
     "order": "Order ParaMind",
     "new": {
       "windows": "New ParaMind for Windows 64 Bit",
